@@ -194,3 +194,42 @@ h1 {
     50% { opacity: 1; }
     100% { opacity: 0.2; }
 }
+/* Скрываем декоративные ::before и ::after, если есть класс hide-code у body */
+body.hide-code h1::before,
+body.hide-code h1::after,
+body.hide-code h2::before,
+body.hide-code h2::after,
+body.hide-code p::before,
+body.hide-code p::after,
+body.hide-code ul::before,
+body.hide-code ul::after,
+body.hide-code li::before,
+body.hide-code li::after,
+body.hide-code a::before,
+body.hide-code a::after {
+    display: none !important;
+}
+nav {
+    display: flex;            /* flex-контейнер */
+    align-items: center;      /* выравнивание по вертикали */
+    gap: 20px;                /* расстояние между элементами */
+}
+
+#toggleCodeBtn {
+    margin-left: auto;        /* кнопка прижимается к правому краю */
+    background-color: #161b22;
+    color: #58a6ff;
+    border: 1px solid #30363d;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#toggleCodeBtn:hover {
+    background-color: #0d1117;
+    color: #79c0ff;
+    border-color: #58a6ff;
+}
