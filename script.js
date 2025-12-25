@@ -13,3 +13,8 @@ Array.from({length:150}).forEach(() => {
     s.style.animationDuration = (Math.random()*3+2)+'s';
     body.appendChild(s);
 });
+const btn = document.getElementById('toggleCodeBtn');
+
+btn.addEventListener('click', () => {
+    document.body.classList.toggle('hide-code');
+});
